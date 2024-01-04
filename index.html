@@ -71,7 +71,7 @@
       <!-- Hero section -->
       <section class="hero">
         <div class="hero-container container">
-          <h1 class="hero-item">Effective Solutions for Your Business</h1>
+          <h1 class="hero-item">Effective Solutions for&nbsp;Your Business</h1>
           <button class="hero-btn" type="button">Order Service</button>
         </div>
       </section>
@@ -139,7 +139,10 @@
             <li class="team-item">
               <img
                 class="team-pic"
-                src="./images/img.jpg"
+                srcset="
+                ./images/team/img.jpg 1x,
+                ./images/team/img@2x.jpg 2x"
+                src="./images/team/img.jpg"
                 alt="Photo Mark Guerrero"
                 width="264"
               />
@@ -181,7 +184,10 @@
             <li class="team-item">
               <img
                 class="team-pic"
-                src="./images/img1.jpg"
+                srcset="
+                ./images/team/img1.jpg 1x,
+                ./images/team/img1@2x.jpg 2x"
+                src="./images/team/img1.jpg"
                 alt="Photo Tom Ford"
                 width="264"
               />
@@ -223,7 +229,10 @@
             <li class="team-item">
               <img
                 class="team-pic"
-                src="./images/img2.jpg"
+                srcset="
+                ./images/team/img2.jpg 1x,
+                ./images/team/img2@2x.jpg 2x"
+                src="./images/team/img2.jpg"
                 alt="Photo Camila Garcia"
                 width="264"
               />
@@ -265,7 +274,10 @@
             <li class="team-item">
               <img
                 class="team-pic"
-                src="./images/img3.jpg"
+                srcset="
+                ./images/team/img3.jpg 1x,
+                ./images/team/img3@2x.jpg 2x"
+                src="./images/team/img3.jpg"
                 alt="Photo Daniel Wilson"
                 width="264"
               />
@@ -314,13 +326,41 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="portfolio-wrapper">
-                <img
+                
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                   media="(min-width: 1158px)"
+                  srcset="
+                  ./images/portfolio/img_desk@1x.jpg 1x,
+                  /images/portfolio/img_desk@2x.jpg 2x
+                  ">
+                 <!-- Tablet -->
+                 <source
+                 media="(min-width: 768px)"
+                srcset="
+                ./images/portfolio/img_tab@1x.jpg 1x,
+                /images/portfolio/img_tab@2x.jpg 2x
+                ">
+                <!-- Mobile -->
+                <source
+                media="(max-width: 767px)"
+               srcset="
+               ./images/portfolio/img_mob@1x.jpg 1x,
+               /images/portfolio/img_mob@2x.jpg 2x
+               ">
+
+                  <img
                   class="portfolio-pic"
                   src="./images/portfolio/img.jpg"
                   alt="Banking App"
                   width="360"
                   height="300"
                 />
+              
+
+                </picture>
+                
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -437,7 +477,7 @@
       </section>
     </main>
     <!-- Footer section -->
-    <footer class="footer hide">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-logo-div">
           <a href="./index.html" class="footer-logo"
