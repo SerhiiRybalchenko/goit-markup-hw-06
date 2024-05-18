@@ -320,7 +320,7 @@
         </div>
       </section>
       <!-- Portfolio section -->
-      <section class="portfolio section">
+      <section id="portfolio"  class="portfolio section">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -569,7 +569,7 @@
       </section>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <footer id="contacts" class="footer">
       <div class="container footer-container">
         <div class="footer-logo-div">
           <a href="./index.html" class="footer-logo"
@@ -636,10 +636,10 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop is-open">
+    <div id="modalWindow" class="modal is-close">
       <div class="modal">
 
-        <button class="modal-btn" type="button" aria-label="Modal close button">
+        <button id="close" class="modal-btn" type="button" aria-label="Modal close button" onclick="closeModal()">
           <svg class="modal-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -738,26 +738,29 @@
       </div>
     </div>
   <!-- mobile menu -->
-  <div class="mobile-menu is-open">
-    <button class="menu-btn" type="button">
-      <svg class="menu-btn-icon" width="8" height="8">
-        <use href="./images/icons.svg#icon-close"></use>
+  <div id="mobile-menu" class="mob-menu container is-close">
+    <button
+      id="close-menu"
+      class="btn-close"
+      type="button"
+      onclick="closeMobMenu()"
+    >
+      <svg class="icon-svg" width="8" height="8">
+        <use class="use-icon" href="./images/icons.svg#icon-close"></use>
       </svg>
-    </button>
-
     <ul class="mobile-menu-list">
       <li class="mobile-menu-item">
-        <a class="mobile-menu-link current" href="" >
+        <a class="mobile-menu-link current" href="./index.html" >
 Studio
         </a>
       </li>
       <li class="mobile-menu-item">
-        <a class="mobile-menu-link" href=" ">
+        <a class="mobile-menu-link" href="#portfolio">
 Portfolio
         </a>
       </li>
       <li class="mobile-menu-item">
-        <a class="mobile-menu-link" href="" >
+        <a class="mobile-menu-link" href="#contacts" >
 Contacts
         </a>
       </li>
@@ -806,5 +809,6 @@ Contacts
         </li>
       </ul>
   </div>
+  <script src="./js/main.js"></script>
   </body>
 </html>
